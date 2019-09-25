@@ -22,12 +22,12 @@ const UserForm = ({ values, errors, touched, status }) => {
   }, [status]);
 
   return (
-    <div className="animal-form">
+    <div className="name-form">
       <Form>
         <Field type="text" name="name" placeholder="name" />
         {touched.name && errors.name && <p className="error">{errors.name}</p>}
 
-        <Field component="select" className="food-select" name="country">
+        <Field component="select" className="country-select" name="country">
           <option>Please Choose an Country</option>
           <option value="bolivia">Bolivia</option>
           <option value="brazil">Brazil</option>

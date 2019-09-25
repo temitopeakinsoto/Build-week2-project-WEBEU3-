@@ -3,15 +3,6 @@ import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 
-// const initialValues = {
-//   name: "",
-//   role: "",
-//   country: "",
-//   email: "",
-//   username: "",
-//   password: ""
-// };
-
 const UserForm = ({ values, errors, touched, status }) => {
   const [coordinator, setCoordinator] = useState([]);
 
@@ -101,11 +92,14 @@ const FormikUserForm = withFormik({
       .required("Password is required!")
   }),
   //you can use this to see the values
-  handleSubmit(values, { setStatus }) {
+  handleSubmit(values, { setStatus, resetForm }) {
     axios
       .post("https://reqres.in/api/users", values)
       .then(response => {
         setStatus(response.data);
+      })
+      .then(response => {
+        resetForm();
       })
       .catch(error => {
         console.log(error.response);

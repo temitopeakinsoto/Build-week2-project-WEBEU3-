@@ -48,11 +48,14 @@ const FormikLoginForm = withFormik({
       .required("Password is required!")
   }),
   //you can use this to see the values
-  handleSubmit(values, { setStatus }) {
+  handleSubmit(values, { setStatus, resetForm }) {
     axios
       .post("https://reqres.in/api/users", values)
       .then(response => {
         setStatus(response.data);
+      })
+      .then(response => {
+        resetForm();
       })
       .catch(error => {
         console.log(error.response);

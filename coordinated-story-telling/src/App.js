@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <h1>Coordinated Story-telling</h1>
       <Form />
     </div>
   );

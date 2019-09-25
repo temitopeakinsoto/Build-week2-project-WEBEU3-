@@ -64,7 +64,7 @@ const UserForm = ({ values, errors, touched, status }) => {
         )}
 
         <Field type="password" name="password" placeholder="password" />
-        {<button /*onClick={() => resetForm(initialValues)}*/>Signup!</button>}
+        {<button>Signup!</button>}
       </Form>
       {coordinator.map(data => (
         <ul key={data.id}>

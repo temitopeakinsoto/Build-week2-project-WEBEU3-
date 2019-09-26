@@ -17,6 +17,9 @@ function App() {
         <Link className="navLinks" to="/">
           Home
         </Link>
+        <Link className="navLinks" to="/about">
+          About
+        </Link>
         <Link className="navLinks" to="/signup">
           Signup{" "}
         </Link>
@@ -30,6 +33,7 @@ function App() {
         <Route exact path="/signup" component={UserForm} />
         <Route path="/login" component={LoginForm} />
       </div>
+      <footer></footer>
     </div>
   );
 }

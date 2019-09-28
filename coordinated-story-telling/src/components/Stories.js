@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from "react";
+import {Link} from "react-router-dom"
+import Storiesdetails from './Storiesdetails';
 import axios from "axios";
 
-function Stories(props) {
+function Stories() {
     const [stories, setStories] = useState([]);
-    console.log('Stories props is', props);
     useEffect(() => {
-        axios.get('http://localhost:5000/api/stories')
+        axios
+        .get('http://localhost:5000/api/stories')
         .then(response => {
-            setStories(response.data);
-            console.log('THIS STORIES IS', response.data);
+            setStories(response.data); 
         }) 
         .catch(error => {
             console.log("There was an error with your request", error)
         });
-    });
-    return(
-        <div>
-            <h1> This is the stories component</h1>
+    }, []);
+
+    return (
+        <div>            
+            {stories.map((story) => ( 
+                <div>
+                <Storiesdetails key={story.id} title={story.title} author={story.author} myStory={story.myStory}/>                
+                <Link to={`/stories/${story.id}`}>READ MORE </Link> 
+                </div>            
+            ))}
         </div>
     )
 }

@@ -12,12 +12,14 @@ const StyledDiv = styled.div`
 `;
 
 function Storiesdetails(props) {
+    const { storyDetails } = props;
+    const { title, author, myStory } = storyDetails;
     return(
         <StyledDiv className="story-card">
-            <h2> {props.author} </h2>           
+            <h2> {author} </h2>           
             <div className="mystory">
-             <h5>{props.title}</h5>   
-             <p> {props.myStory} </p>
+             <h5>{title}</h5>   
+             <p> {myStory} </p>
             </div>
         </StyledDiv>
 

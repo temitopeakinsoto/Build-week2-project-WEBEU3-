@@ -20,7 +20,7 @@ function Stories() {
         <div>            
             {stories.map((story) => ( 
                 <div>
-                <Storiesdetails key={story.id} title={story.title} author={story.author} myStory={story.myStory}/>                
+                <Storiesdetails key={story.id} storyDetails = {story} />                
                 <Link to={`/stories/${story.id}`}>READ MORE </Link> 
                 </div>            
             ))}

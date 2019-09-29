@@ -35,7 +35,7 @@ const stories = [
 	{
 		id: 4,
 		title: 'How I made money trading online',
-		author: 'The Farely Brothers',
+		author: 'Martin Twum Mensah',
 		myStory: "The client agrees that the operation of the account is subject to compliance by Lead Asset Management with all laws, regulations, administrative rules and orders which may from time to time be   authorized by the Federal Government of Nigeria and/or any other regulatory authorities in Nigeria.  b. 2 In consideration of Lead Asset Management allowing the client to operate the account from time to time, the client hereby undertakes to hold Lead Asset Management harmless and keep Lead Asset Management indemnified from all losses, costs, or damages Lead Asset Management may sustain or be put to. ",
 	},
 	{

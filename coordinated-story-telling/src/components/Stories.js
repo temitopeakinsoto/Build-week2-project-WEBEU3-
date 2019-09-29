@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {Link} from "react-router-dom"
-import Storiesdetails from './Storiesdetails';
+import StoriesDetails from './StoriesDetails';
 import axios from "axios";
 
 function Stories() {
@@ -20,8 +19,7 @@ function Stories() {
         <div>            
             {stories.map((story) => ( 
                 <div>
-                <Storiesdetails key={story.id} storyDetails = {story} />                
-                <Link to={`/stories/${story.id}`}>READ MORE </Link> 
+                    <StoriesDetails key={story.id} storyDetails = {story} />              
                 </div>            
             ))}
         </div>
